@@ -1,5 +1,15 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: rgb(196, 145, 243);
+    height: 100vh;
 }
+
+.card {
+    height: 600px;
+    width: 400px;
+    font-size: 133px;
+    border-radius: 18px;
+}
+
+
