@@ -1,15 +1,32 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
     background: rgb(196, 145, 243);
     height: 100vh;
+    line-height: 1;
 }
 
 .card {
     height: 600px;
     width: 400px;
-    font-size: 133px;
+    font-size: 9rem;
     border-radius: 18px;
 }
 
+.card .cardNumber {
+    font-size: 14rem;
+}
 
+.stick {
+    margin-left: 18px;
+}
+
+.last {
+    margin-right: 18px;
+
+}
