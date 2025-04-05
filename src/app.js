@@ -13,6 +13,8 @@ let buttonChange = document.getElementById('change');
 let newHeight = document.getElementById('height');
 let newWidth = document.getElementById('width');
 let card = document.querySelector('.card');
+let counter = document.getElementById('counter');
+let time = 5;
 
 const NewCard = () => {
   let randomNumber = Math.floor(Math.random() * 12);
@@ -47,8 +49,14 @@ newWidth.addEventListener('change', (e) => {
 });
 
 setInterval(() => {
-  NewCard();
-}, 5000);
+  time--;
+  counter.textContent = `Cambiando carta en ${time}`;
+
+  if (time <= 0) {
+    NewCard();
+    time = 5;
+  }
+}, 1000);
 
 
 
