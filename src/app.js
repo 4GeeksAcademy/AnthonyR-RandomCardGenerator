@@ -9,12 +9,12 @@ let stickArr = ['♦', '♥', '♠', '♣'];
 let numbersArr = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 'J', 'Q', 'K'];
 let sticks = document.querySelectorAll('.stick');
 let cardNumber = document.querySelector('.cardNumber');
+let buttonChange = document.getElementById('change');
+let newHeight = document.getElementById('height');
+let newWidth = document.getElementById('width');
+let card = document.querySelector('.card');
 
-
-
-
-window.onload = function() {
-  //write your code here
+const NewCard = () => {
   let randomNumber = Math.floor(Math.random() * 12);
   let randomStick = Math.floor(Math.random() * 4);
   let newNumber = numbersArr[randomNumber];
@@ -27,5 +27,29 @@ window.onload = function() {
 
     stick.style.color = (newStick === '♥' || newStick === '♦' ? 'red' : 'black');
   });
+}
 
+window.onload = function() {
+  //write your code here
+  NewCard();
 };
+
+buttonChange.addEventListener('click', (e) => {
+  NewCard();
+});
+
+newHeight.addEventListener('change', (e) => {
+  card.style.height = `${e.target.value}px`;
+});
+
+newWidth.addEventListener('change', (e) => {
+  card.style.width = `${e.target.value}px`;
+});
+
+setInterval(() => {
+  NewCard();
+}, 5000);
+
+
+
+
